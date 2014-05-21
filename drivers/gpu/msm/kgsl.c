@@ -3395,6 +3395,9 @@ kgsl_ioctl_sharedmem_flush_cache(struct kgsl_device_private *dev_priv,
 /* The largest allowable alignment for a GPU object is 32MB */
 #define KGSL_MAX_ALIGN (32 * SZ_1M)
 
+/* The largest allowable alignment for a GPU object is 32MB */
+#define KGSL_MAX_ALIGN (32 * SZ_1M)
+
 /*
  * The common parts of kgsl_ioctl_gpumem_alloc and kgsl_ioctl_gpumem_alloc_id.
  */
