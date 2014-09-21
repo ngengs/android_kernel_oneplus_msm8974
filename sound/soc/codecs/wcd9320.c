@@ -7931,6 +7931,7 @@ static int taiko_codec_probe(struct snd_soc_codec *codec)
 	snd_soc_dapm_sync(dapm);
 
 	codec->ignore_pmdown_time = 1;
+
 /* OPPO 2013-11-12 xuzhaoan Add begin for America Headset Detect */
 #ifdef CONFIG_MACH_MSM8974_14001
     priv_headset_type = taiko;
