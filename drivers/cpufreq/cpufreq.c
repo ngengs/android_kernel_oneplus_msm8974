@@ -721,7 +721,7 @@ static struct attribute *default_attrs[] = {
 	&scaling_available_governors.attr,
 	&scaling_setspeed.attr,
 	&policy_min_freq.attr,
-        &policy_max_freq.attr,
+	&policy_max_freq.attr,
 #ifdef CONFIG_CPU_VOLTAGE_TABLE
 	&UV_mV_table.attr,
 #endif
