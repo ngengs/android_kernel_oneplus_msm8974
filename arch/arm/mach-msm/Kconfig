@@ -3068,15 +3068,22 @@ config HAS_MACH_MEMUTILS
 	help
 	Faster memcpy performance for Krait
 
-config SPEED_LEVEL_INTERFACE
-        bool "Expose SPEED level information in sys fs"
-        help
-         Allow SPEED level to be shown into specific kernel apps
+config BLU_PLUG
+	bool "Dynamic hotplug driver"
+	depends on HOTPLUG_CPU
+	default n
+	help
+	  The Dynamic hotplug driver automatically online/offline CPUs proportional to system load.
 
 config PVS_LEVEL_INTERFACE
 	bool "Expose PVS level information in sys fs (Boeffla-Kernel)"
 	help
 	 Allow PVS level to be shown in Boeffla-Config app
+
+config SPEED_LEVEL_INTERFACE
+        bool "Expose SPEED level information in sys fs"
+        help
+         Allow SPEED level to be shown into specific kernel apps
 
 config MSM_LIMITER
 	bool "MSM Frequency Limiter Driver"
