@@ -1889,6 +1889,11 @@ config FORCE_FAST_CHARGE
 	  are detected as USB to charge as AC (1A/h) or to set
 	  custom charging currents for AC and USB.
 
+config THUNDERPLUG_CONTROL
+	bool "Enable plugging down/up of cores based on load per core"
+	help
+	  This driver hotplugs cpu cores based on per-core load
+
 config CPU_VOLTAGE_TABLE
 	bool "Enable CPU Voltage Table via sysfs for adjustments"
 	default n
