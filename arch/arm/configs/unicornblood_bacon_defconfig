@@ -1,7 +1,12 @@
 #
-# UnicornBlood
+# Automatically generated file; DO NOT EDIT.
+# Linux/arm 3.4.111 Kernel Configuration
+# UnicornBlood Edit
 #
-CONFIG_FB_MSM_MDSS_KCAL_CTRL=y
+
+#
+# General setup
+#
 
 # CONFIG_ARM_PATCH_PHYS_VIRT is not set
 CONFIG_EXPERIMENTAL=y
@@ -596,3 +601,4 @@ CONFIG_CRYPTO_TWOFISH=y
 CONFIG_CRYPTO_DEV_QCRYPTO=y
 CONFIG_CRYPTO_DEV_QCE=y
 CONFIG_CRYPTO_DEV_QCEDEV=y
+CONFIG_FB_MSM_MDSS_KCAL_CTRL=y
