@@ -22,13 +22,10 @@
 #include <linux/of.h>
 #include <linux/cpumask.h>
 
-<<<<<<< HEAD
 #ifdef CONFIG_CPU_VOLTAGE_TABLE
 #include <linux/cpufreq.h>
 #endif
 
-=======
->>>>>>> 72bc9b3... clock-krait-8974: Expose PVS level via sysfs
 #include <asm/cputype.h>
 
 #include <mach/rpm-regulator-smd.h>
@@ -38,14 +35,6 @@
 #include "clock-krait.h"
 #include "clock.h"
 
-<<<<<<< HEAD
-=======
-#ifdef CONFIG_PVS_LEVEL_INTERFACE
-int pvs_level = -1;
-module_param(pvs_level, int, S_IRUGO); 
-#endif
-
->>>>>>> 72bc9b3... clock-krait-8974: Expose PVS level via sysfs
 /* Clock inputs coming into Krait subsystem */
 DEFINE_FIXED_DIV_CLK(hfpll_src_clk, 1, NULL);
 DEFINE_FIXED_DIV_CLK(acpu_aux_clk, 2, NULL);
@@ -516,13 +505,6 @@ static void get_krait_bin_format_b(struct platform_device *pdev,
 		*svs_pvs = -1;
 	}
 
-<<<<<<< HEAD
-=======
-#ifdef CONFIG_PVS_LEVEL_INTERFACE
-	pvs_level = *pvs;
-#endif
-
->>>>>>> 72bc9b3... clock-krait-8974: Expose PVS level via sysfs
 	dev_info(&pdev->dev, "PVS version: %d\n", *pvs_ver);
 
 	devm_iounmap(&pdev->dev, base);
@@ -642,7 +624,6 @@ module_param_string(table_name, table_name, sizeof(table_name), S_IRUGO);
 static unsigned int pvs_config_ver;
 module_param(pvs_config_ver, uint, S_IRUGO);
 
-<<<<<<< HEAD
 #ifdef CONFIG_CPU_VOLTAGE_TABLE
 
 #define CPU_VDD_MIN	 600
@@ -723,8 +704,6 @@ ssize_t store_UV_mV_table(struct cpufreq_policy *policy, char *buf,
 }
 #endif
 
-=======
->>>>>>> 72bc9b3... clock-krait-8974: Expose PVS level via sysfs
 static int clock_krait_8974_driver_probe(struct platform_device *pdev)
 {
 	struct device *dev = &pdev->dev;
