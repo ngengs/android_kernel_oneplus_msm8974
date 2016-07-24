@@ -249,15 +249,15 @@ HOSTCFLAGS   = -Wall -Wmissing-prototypes -Wstrict-prototypes -O3 -fomit-frame-p
 HOSTCXXFLAGS = -O3
 
 # Tweaks
-TWEAK_CFLAGS += -fgcse-las \
-                -fgcse-sm \
-		-fgraphite \
-		-fgraphite-identity \
-                -ftree-loop-ivcanon \
-                -fweb
+TWEAKFLAGS += -fgcse-las \
+              -fgcse-sm \
+	      -fgraphite \
+              -fgraphite-identity \
+              -ftree-loop-ivcanon \
+              -fweb
                 
-HOSTCFLAGS += $(TWEAK_CFLAGS)
-HOSTCXXFLAGS += $(TWEAK_CFLAGS)
+HOSTCFLAGS += $(TWEAKFLAGS)
+HOSTCXXFLAGS += $(TWEAKFLAGS)
 
 # Decide whether to build built-in, modular, or both.
 # Normally, just do built-in.
@@ -363,12 +363,12 @@ CC		= $(srctree)/scripts/gcc-wrapper.py $(REAL_CC)
 CHECKFLAGS     := -D__linux__ -Dlinux -D__STDC__ -Dunix -D__unix__ \
 		  -Wbitwise -Wno-return-void $(CF)
 
-CFLAGS_MODULE   = $(TWEAK_CFLAGS)
+CFLAGS_MODULE   = $(TWEAKFLAGS)
 AFLAGS_MODULE   =
 LDFLAGS_MODULE  = -Wl --sort-common
-CFLAGS_KERNEL	= $(TWEAK_CFLAGS)
+CFLAGS_KERNEL	= $(TWEAKFLAGS)
 AFLAGS_KERNEL	=
-CFLAGS_GCOV	= -fprofile-arcs -ftest-coverage $(TWEAK_CFLAGS)
+CFLAGS_GCOV	= -fprofile-arcs -ftest-coverage $(TWEAKFLAGS)
 
 
 # Use LINUXINCLUDE when you must reference the include/ directory.
