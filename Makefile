@@ -249,11 +249,23 @@ HOSTCFLAGS   = -Wall -Wmissing-prototypes -Wstrict-prototypes -O3 -fomit-frame-p
 HOSTCXXFLAGS = -O3
 
 # Tweaks
-TWEAKFLAGS += -fgcse-las \
+TWEAKFLAGS += -fforce-addr \
+              -fgcse-las \
+              -fgcse-lm \
               -fgcse-sm \
 	      -fgraphite \
               -fgraphite-identity \
+              -floop-block \
+              -floop-flatten \
+              -floop-interchange \
+              -floop-parallelize-all \
+              -floop-strip-mine \
+              -fpredictive-commoning \
+              -fsched-spec-load \
               -ftree-loop-ivcanon \
+              -ftree-loop-linear \
+              -ftree-vectorize \
+              -funroll-loops \
               -fweb
                 
 HOSTCFLAGS += $(TWEAKFLAGS)
