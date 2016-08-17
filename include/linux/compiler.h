@@ -173,7 +173,7 @@ void ftrace_likely_update(struct ftrace_branch_data *f, int val, int expect);
 # define __UNIQUE_ID(prefix) __PASTE(__PASTE(__UNIQUE_ID_, prefix), __LINE__)
 #endif
 
-#include <uapi/linux/types.h>
+#include <linux/types.h>
 
 static __always_inline void __read_once_size(const volatile void *p, void *res, int size)
 {
